@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
+import { DialogService } from "ng2-bootstrap-modal";
+import { ErrorMsgComponent } from './error-msg.component';
 
 @Component({
   selector: 'login',
@@ -11,7 +13,7 @@ export class LoginComponent implements OnInit, OnDestroy{
   username: string = "demo";
   passcode: string = "demo";
 
-  constructor(private router: Router){
+  constructor(private router: Router, private dialogService: DialogService){
 
   }
 
@@ -25,7 +27,9 @@ export class LoginComponent implements OnInit, OnDestroy{
     if(this.username === "demo" && this.passcode === "demo"){
         this.router.navigateByUrl('/listings')
     } else {
-        alert("Invaild username or password!");
+      this.dialogService.addDialog(ErrorMsgComponent, {
+        title:'Error', 
+        message:'Invalid username or password!'})
     }
   }
 

@@ -7,6 +7,8 @@ import { LoginComponent } from './login.component';
 import { ListingComponent } from './listing.component';
 import { DataService }  from '../services/data.service';
 import { HttpModule } from '@angular/http';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { ErrorMsgComponent } from './error-msg.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full'},
@@ -18,13 +20,19 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListingComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorMsgComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BootstrapModalModule,
+    BootstrapModalModule.forRoot({container:document.body}),
     RouterModule.forRoot(appRoutes)
+  ],
+  entryComponents: [
+    ErrorMsgComponent
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
