@@ -25,25 +25,14 @@
 }
 
 .flex-col {
-        /* padding: 5px; */
-        position: relative;
-        /* width: 100%; */
-        margin: 0;
-        min-height: 1px;
-        /* -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        max-width: 100%; */
+    position: relative;
+    margin: 0;
+    min-height: 1px;
 }
 
 .resize {
     width: 110px;
     height: 220px;
-    /* margin: 0; */
     position: absolute;
     margin: auto;
     top: 0;
@@ -53,11 +42,20 @@
     padding-bottom: 90px;
 }
 
-.six {
+.size {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
-    width: 50%;
-    max-width: 50%;
-}
+    max-width: 50%;  
+} 
+
+@media screen and (min-width: 576px) { 
+    .size {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;          
+    } 
+ } 

@@ -7,14 +7,13 @@ import {DataService} from '../services/data.service';
   styleUrls: ['./listing.component.css']
 })
 
-export class ListingComponent {
+export class ListingComponent implements OnInit{
     items = [];
     constructor(private dataService: DataService) {   
-      this.items = dataService.getData();
+
     }
 
-    // ngOnInit(){
-    //   this.items = this.dataService.getData();
-    //   console.log(this.items)
-    // }
+    ngOnInit(){
+      this.items = this.dataService.getData();
+    }
 }

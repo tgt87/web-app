@@ -13,7 +13,7 @@ export class LoginComponent implements OnDestroy{
 
   constructor(private router: Router){
     document.body.style.backgroundImage = "url(./assets/background.jpg)";
-    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundSize = "auto";
     document.body.style.backgroundRepeat = "no-repeat";
   }
 
