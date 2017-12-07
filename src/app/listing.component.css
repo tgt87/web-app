@@ -50,6 +50,16 @@
     max-width: 50%;  
 } 
 
+@media screen and (min-width: 480px) { 
+    .size {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33%;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;          
+    } 
+} 
+
 @media screen and (min-width: 576px) { 
     .size {
         -webkit-box-flex: 0;
@@ -58,4 +68,4 @@
         flex: 0 0 25%;
         max-width: 25%;          
     } 
- } 
+} 
