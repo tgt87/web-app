@@ -27,10 +27,10 @@ export class LoginComponent implements OnInit, OnDestroy{
     if(this.username === "demo" && this.passcode === "demo"){
         this.router.navigateByUrl('/listings')
     } else {
-    //   this.dialogService.addDialog(ErrorMsgComponent, {
-    //     title:'Error', 
-    //     message:'Invalid username or password!'})
-      alert('Invalid username or password!');
+      this.dialogService.addDialog(ErrorMsgComponent, {
+        title:'Error', 
+        message:'Invalid username or password!'})
+      // alert('Invalid username or password!');
     }
     
   }
